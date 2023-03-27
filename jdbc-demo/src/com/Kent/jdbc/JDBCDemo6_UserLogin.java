@@ -64,8 +64,11 @@ public class JDBCDemo6_UserLogin {
         // 接收使用者的帳號和密碼
         String name = "Nina789456";
         String pwd = "' or '1' = '1";
+
+        //select * from db1.tb_user where username = 'Nina789456' and password = '' or '1' = '1'
         String sql = "select * from db1.tb_user where username = '" + name + "' and password = '" + pwd + "'";
         System.out.println(sql);
+
         // 取得 statement 物件
         Statement stmt = conn.createStatement();
 
